@@ -1,0 +1,20 @@
+package com.kodnest.tunehub.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.kodnest.tunehub.entity.User;
+
+@Controller
+public class UserController {
+	
+	@PostMapping("/register")
+	@ResponseBody
+	public void userdata(@ModelAttribute User user)
+	{
+		System.out.println("User data");
+		System.out.println(user);
+	}
+}
